@@ -2,5 +2,5 @@
   (:require [clj-http.client :as http]))
 
 (defn fetch-input [year day]
-  (let [response (http/get "https://adventofcode.com/2024/1/input")]
+  (let [response (http/get "https://adventofcode.com/2024/1/input" {:headers {"Cookie" "session=valid-session-cookie"}})]
     (:body response)))
