@@ -1,0 +1,6 @@
+{:deps {clj-http/clj-http {:mvn/version "3.13.0"}}
+ :aliases
+ {:spec
+  {:main-opts ["-m" "speclj.main" "-c"]
+   :extra-deps {speclj/speclj {:mvn/version "3.5.0"}}
+   :extra-paths ["spec"]}}}
