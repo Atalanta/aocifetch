@@ -11,4 +11,11 @@
     (it "returns puzzle input for a given year and day"
       (with-redefs [http/get (fn [_ _] {:status 200 :body "Here is some puzzle input"})]
         (should= "Here is some puzzle input"
-                 (ifetch/fetch-input 2024 1))))))
+                 (ifetch/fetch-input 2024 1)))))
+  (context "when no session cookie is set"
+           (before
+            (System/clearProperty "AOC_SESSION_COOKIE"))
+           (it "complains about missing cookie"
+               (should-throw Exception "No session cookie found - set AOC_SESSION_COOKIE"
+                             (ifetch/fetch-input 2024 1)))))
+
