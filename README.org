@@ -1,0 +1,50 @@
+* AoCifetch - fetch Advent of Code Input
+
+** Rationale
+
+The input for Advent of Code puzzles is typically obtained by logging
+into the [[https://adventofcode][Advent of Code]] website and clicking on the input link for the
+puzzle in question.  This produces the input needed for you to attempt
+to solve the puzzle.
+
+While it's not too painful to visit the site, click on the link, and
+download the input as a file (which can be used as a fixture), it
+would be even nicer to fetch the input with a single call.  This
+allows east access to the input directly in a REPL or for subsequent
+processing when solving the puzzle.  It also makes it easy for people
+to explore and use a shared solution without breaking the guidelines
+of not sharing the actual generated input.
+
+AoCifetch is a simple library that does exactly this.
+
+** Usage
+
+Add a dependency in =deps.edn= pointing to this repo at the
+appropriate tag or reference.  For example:
+
+#+begin_src clojure
+      {:deps
+       {atalanta/aocifetch
+	{:git/url "https://github.com/Atalanta/aocifetch"
+	 :git/tag "v0.1.0"}}}
+#+end_src
+
+Log in to the website, and locate your session cookie.
+
+Set the envionment variable =AOC_SESSION_COOKIE= in the shell where
+you run your tests, code or REPL.  This ensures the library has access
+the the session cookie to fetch the puzzle input.
+
+** Status
+
+Vaporware - idea captured, no code written.
+
+** Contributing
+
+This project should move beyond vaporware pretty swiftly, as it
+scratches an immediate itch for me. However, contributions are
+welcome! Feel free to fork the repository, make improvements, and
+submit a pull request.
+
+Ideas, feedback, feature requests, and other suggestions are also
+welcome via issues or discussions.
