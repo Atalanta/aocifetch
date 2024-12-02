@@ -10,7 +10,7 @@ to solve the puzzle.
 While it's not too painful to visit the site, click on the link, and
 download the input as a file (which can be used as a fixture), it
 would be even nicer to fetch the input with a single call.  This
-allows east access to the input directly in a REPL or for subsequent
+allows easy access to the input directly in a REPL or for subsequent
 processing when solving the puzzle.  It also makes it easy for people
 to explore and use a shared solution without breaking the guidelines
 of not sharing the actual generated input.
@@ -31,7 +31,7 @@ appropriate tag or reference.  For example:
 
 Log in to the website, and locate your session cookie.
 
-Set the envionment variable =AOC_SESSION_COOKIE= in the shell where
+Set the environment variable =AOC_SESSION_COOKIE= in the shell where
 you run your tests, code or REPL.  This ensures the library has access
 the the session cookie to fetch the puzzle input.
 
