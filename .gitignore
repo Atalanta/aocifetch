@@ -15,6 +15,10 @@ auto-save-list
 # Editor/IDE files
 .idea/
 *.iml
+.clj-kondo/
+.lsp/
+
+# macOS Finder metadata
 .DS_Store
 
 # Logs and crash reports
