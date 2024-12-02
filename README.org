@@ -45,15 +45,24 @@ The ~fetch-input~ function can be used to fetch the input:
 
 ** Development
 
-Run tests with:
+Run specs with:
 
 #+begin_src shell
   clj -M:spec -f d
 #+end_src
 
+There's an integration test which validates the whole thing, without mocks.  Set your =AOC_SESSION_COOKIE= and run"
+
+#+begin_src shell
+clj -M:test -m aocifetch.integration-test
+#+end_src
+
+This will fetch the input for [[https://adventofcode.com/2022/day/4][day 4 of Advent of Code 2022]], which will
+contain a series of camp cleanup section assignments.
+
 ** Status
 
-In progress.
+Working, needs unhappy path tests.
 
 ** Contributing
 
