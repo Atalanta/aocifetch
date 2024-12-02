@@ -35,6 +35,14 @@ Set the envionment variable =AOC_SESSION_COOKIE= in the shell where
 you run your tests, code or REPL.  This ensures the library has access
 the the session cookie to fetch the puzzle input.
 
+The ~fetch-input~ function can be used to fetch the input:
+
+#+begin_src clojure
+(require '[aocifetch.core :as ifetch])
+
+(def day1-input (ifetch/fetch-input "2024" "1"))
+#+end_src
+
 ** Development
 
 Run tests with:
@@ -45,7 +53,7 @@ Run tests with:
 
 ** Status
 
-Vaporware - idea captured, dumb test passing.
+In progress.
 
 ** Contributing
 
