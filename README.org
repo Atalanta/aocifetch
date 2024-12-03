@@ -23,10 +23,11 @@ Add a dependency in =deps.edn= pointing to this repo at the
 appropriate tag or reference.  For example:
 
 #+begin_src clojure
-      {:deps
-       {atalanta/aocifetch
-	{:git/url "https://github.com/Atalanta/aocifetch"
-	 :git/tag "v0.1.0"}}}
+	{:deps
+	 {atalanta/aocifetch
+	  {:git/url "https://github.com/Atalanta/aocifetch"
+	   :git/tag "v0.1.0"
+	   :git/sha "362c1c1bdf47b0fdf1c6b591e355e326d0590004"}}}
 #+end_src
 
 Log in to the website, and locate your session cookie.
@@ -51,7 +52,8 @@ Run specs with:
   clj -M:spec -f d
 #+end_src
 
-There's an integration test which validates the whole thing, without mocks.  Set your =AOC_SESSION_COOKIE= and run"
+There's an integration test which validates the whole thing, without
+mocks.  Set your =AOC_SESSION_COOKIE= and run"
 
 #+begin_src shell
 clj -M:test -m aocifetch.integration-test
@@ -66,10 +68,8 @@ Working, needs unhappy path tests.
 
 ** Contributing
 
-This project should move beyond vaporware pretty swiftly, as it
-scratches an immediate itch for me. However, contributions are
-welcome! Feel free to fork the repository, make improvements, and
-submit a pull request.
+Contrubutions are extremely welcome! Feel free to fork the repository, make
+improvements, and submit a pull request.
 
 Ideas, feedback, feature requests, and other suggestions are also
 welcome via issues or discussions.
