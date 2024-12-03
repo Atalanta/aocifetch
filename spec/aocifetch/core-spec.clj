@@ -1,8 +1,7 @@
 (ns aocifetch.core-spec
   (:require [speclj.core :refer :all]
             [aocifetch.core :as ifetch]
-            [clj-http.client]
-            ))
+            [clj-http.client]))
 
 (describe "AoCifetch"
           (context "when given a year and day"
@@ -18,5 +17,4 @@
                        (with-redefs [ifetch/get-cookie (fn [] "areallydeliciouscookie")
                                      clj-http.client/get (fn [_ _] {:body "Here is your puzzle input!"})]
                          (should= "Here is your puzzle input!"
-                                  (ifetch/fetch-input "2024" "1"))
-                         ))))
+                                  (ifetch/fetch-input "2024" "1"))))))

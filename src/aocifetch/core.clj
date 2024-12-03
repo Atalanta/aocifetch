@@ -1,6 +1,5 @@
 (ns aocifetch.core
-  (:require [clj-http.client]
-            ))
+  (:require [clj-http.client]))
 (defn get-cookie []
   (System/getenv "AOC_SESSION_COOKIE"))
 
