@@ -1,4 +1,5 @@
-{:deps {clj-http/clj-http {:mvn/version "3.13.0"}}
+{:deps {clj-http/clj-http {:mvn/version "3.13.0"}
+        zprint/zprint {:mvn/version "1.2.9"}}
  :aliases
  {:spec
   {:main-opts ["-m" "speclj.main" "-c"]
